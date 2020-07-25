@@ -1,0 +1,9 @@
+.mobile-container {
+  width: 355px;
+  height: 680px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 130px auto 130px;
+  border: solid 1px black;
+}
