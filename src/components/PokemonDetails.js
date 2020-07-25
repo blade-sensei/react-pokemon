@@ -1,7 +1,10 @@
 import React from 'react';
 import './PokemonDetails.css'
 
-const PokemonDetails = () => {
+const PokemonDetails = (props) => {
+
+  console.log(props.location.state);
+
   return (
     <div>
       details

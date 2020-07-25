@@ -13,12 +13,7 @@ function MobileView() {
         <Header/>
       </div>
       <div className='mobile-body'>
-        <Router>
-          <Link to='/list'>List</Link>
-          <Link to='/details'>Details</Link>
-          <Route path='/list' component={ListPokemon}/>
-          <Route path='/details' component={PokemonDetails}/>  
-        </Router>
+        <ListPokemon/>
       </div>
       <div className='mobile-footer'></div>
     </div>
