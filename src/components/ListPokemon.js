@@ -1,6 +1,7 @@
 import React from 'react';
 import './ListPokemon.css'
 import { useHistory } from 'react-router-dom';
+import PokemonOverview from './PokemonOverview';
 
 const ListPokemon = (props) => {
   let history = useHistory();
@@ -44,6 +45,9 @@ const ListPokemon = (props) => {
       <div className='pokemon-overview' onClick={() => redirectToPokemonOverview(pokemon) }>
         this is pokemon { pokemon.name }
 
+          <div className='pokemon-overview'>
+           <PokemonOverview/>
+          </div>
       </div>
     ))
   );

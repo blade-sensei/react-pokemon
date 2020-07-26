@@ -1,0 +1,38 @@
+.PokemonDetails {
+  display: flex;
+  height: 75px;
+  align-items: center;
+}
+
+.types {
+  display: flex;
+  margin-left: auto;
+  margin-right: 5px;
+}
+
+.caracter-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+  font-family: Avenir-Medium;
+  font-size: 19px;
+  color: #1f1f1f;
+  letter-spacing: 0;
+}
+
+.caracter-number {
+  font-family: Avenir-Book;
+  font-size: 15px;
+  color: #3f3f3f98;
+  letter-spacing: 0;
+}
+
+.avatar img {
+  height: 50px;
+  width: 50px;
+}
+
+.avatar {
+  margin-left: 20px;
+  margin-top: 3px;
+}

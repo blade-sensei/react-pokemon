@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import MobileView from './components/MobileView';
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
-import PokemonDetails from './components/PokemonDetails';
+import PokemonOverview from './components/PokemonOverview';
 import ListPokemon from './components/ListPokemon';
 
 
@@ -13,7 +13,7 @@ function App() {
       <header className="App-header">
         <Router forceRefresh={true}>
           <Switch>
-          <Route path='/pokemon' component = {PokemonDetails}/>
+          <Route path='/pokemon' component = {PokemonOverview}/>
             <Route path='/list' component = {ListPokemon}/>
             <Redirect from='/' to='/list'/>
           </Switch>
