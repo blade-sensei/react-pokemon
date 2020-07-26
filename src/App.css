@@ -2,5 +2,6 @@
   padding: 5% 0;
   width: 400px;
   margin: 0 auto;
-  height: 812px;
+  height: 500px;
+  display: flex;
 }

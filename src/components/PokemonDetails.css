@@ -1,13 +1,15 @@
 .PokemonDetails {
   background-image: linear-gradient(90deg, #559EDF 38%, #69B9E3 62%);
-  height: 100%;
+  display: grid;
+  grid-template-rows: 619px;
+  grid-template-columns: 355px;
+
 }
 
 .container {
   padding-top: 220px;
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .pokemon-details {
