@@ -1,18 +1,16 @@
 import './MobileView.css';
 import Header from './Header';
-import { Link, BrowserRouter as Router, Route } from 'react-router-dom';
-import ListPokemon from './ListPokemon';
 
 import React from 'react';
 
-function MobileView() {
+function MobileView({children}) {
   return (
     <div className='mobile-container'>
       <div className='mobile-header'>
         <Header/>
       </div>
       <div className='mobile-body'>
-        <ListPokemon/>
+        {children}
       </div>
       <div className='mobile-footer'></div>
     </div>

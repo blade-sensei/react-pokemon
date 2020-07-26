@@ -2,6 +2,7 @@ import React from 'react';
 import './ListPokemon.css'
 import { useHistory } from 'react-router-dom';
 import PokemonOverview from './PokemonOverview';
+import MobileView from './MobileView';
 
 const ListPokemon = (props) => {
   let history = useHistory();
@@ -53,9 +54,11 @@ const ListPokemon = (props) => {
   );
   
   return (
-    <div className='ListPokemon'>
-      { renderListPokemon(pokemons) }
-    </div>
+    <MobileView>
+      <div className='ListPokemon'>
+        { renderListPokemon(pokemons) }
+      </div>
+    </MobileView>
   )
 }
 
