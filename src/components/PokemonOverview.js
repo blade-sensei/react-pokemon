@@ -6,12 +6,12 @@ const PokemonOverview = (props) => {
   
 
   return (
-    <div className='PokemonDetails'>
+    <div className='PokemonOverview'>
       <div className='avatar'>
         <img src='/img/pokemon/avatar.png' alt='avatar'/>
       </div>
       <div className='caracter-info'>
-        <span className='caracter-name'>name</span> 
+        <sp className='caracter-name'>name</sp> 
         <span className='caracter-number'>#12</span> 
       </div>
       <div className='types'>

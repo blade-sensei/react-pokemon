@@ -1,0 +1,29 @@
+.PokemonDetails {
+  background-image: linear-gradient(90deg, #559EDF 38%, #69B9E3 62%);
+  height: 100%;
+}
+
+.container {
+  padding-top: 220px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pokemon-details {
+  background-color: white;
+  flex: 1;  
+  background: #FAFAFA;
+  border-radius: 48px 48px 0 0;
+  
+}
+
+.pokemon-avatar {
+  display: flex;
+  justify-content: center;
+  margin-top: -130px;
+}
+
+.name {
+  text-align: center;
+}
