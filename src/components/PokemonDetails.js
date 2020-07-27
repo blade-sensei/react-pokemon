@@ -24,7 +24,8 @@ const PokemonDetails = () => (
         <div className="description">
           Squirtle’s shell is not merely used for protection.
           The shell’s rounded shape and the grooves on its surface help minimize resistance in water, enabling this pokemon to swim at high speed.
-      </div>
+        </div>
+        <img className='stats' src="/img/stats.png" alt=""/>
       </div>
     </div>
   </div>
