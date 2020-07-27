@@ -11,7 +11,7 @@ const PokemonOverview = (props) => {
         <img src='/img/pokemon/avatar.png' alt='avatar'/>
       </div>
       <div className='caracter-info'>
-        <sp className='caracter-name'>name</sp> 
+        <span className='caracter-name'>name</span> 
         <span className='caracter-number'>#12</span> 
       </div>
       <div className='types'>

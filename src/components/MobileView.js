@@ -12,7 +12,12 @@ function MobileView({children}) {
       <div className='mobile-body'>
         {children}
       </div>
-      <div className='mobile-footer'></div>
+      <div className='mobile-footer'>
+        <div className="navigation-item">
+          <img src="img/pokemon/navigation.png" alt="" className="item"/>
+          <span className="item-name">Pokemons</span>
+        </div>
+      </div>
     </div>
   )
 }

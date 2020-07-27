@@ -2,6 +2,18 @@
   display: flex;
   height: 75px;
   align-items: center;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+.PokemonOverview:hover {
+  background-image: linear-gradient(-1deg, #61d4f1 0%, #70cee6 100%);
+  box-shadow: 0 0 10px 0 rgba(96,173,225,0.70);
+/* Sketch doesnt export pattern fills at this point */
+/* Sketch doesnt export pattern fills at this point */
+
+
+
 }
 
 .types {
@@ -25,6 +37,14 @@
   font-size: 15px;
   color: #3f3f3f98;
   letter-spacing: 0;
+}
+
+.caracter-name {
+  font-family: Avenir-Medium;
+  font-size: 19px;
+  color: #4F4F4F;
+  letter-spacing: 0;
+  font-weight: bold;
 }
 
 .avatar img {

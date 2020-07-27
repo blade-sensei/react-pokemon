@@ -44,8 +44,6 @@ const ListPokemon = (props) => {
   const renderListPokemon = (pokemons) => (
     pokemons.map((pokemon) => (
       <div className='pokemon-overview' onClick={() => redirectToPokemonOverview(pokemon) }>
-        this is pokemon { pokemon.name }
-
           <div className='pokemon-overview'>
            <PokemonOverview/>
           </div>
