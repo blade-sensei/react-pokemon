@@ -11,6 +11,16 @@ const PokemonDetails = () => (
         <h2 className="name">
           Squirtle
         </h2>
+        <div className="types-logo">
+          <span className='logo'>
+            <img src="/img/pokemon/types/logo/water.png" alt=""/>
+            <span className="type">ICE</span>
+          </span>
+          <span className="logo">
+            <img src="/img/pokemon/types/logo/ice.png" alt=""/>
+            <span className="type">DRAGON</span>
+          </span>
+        </div>
         <div className="description">
           Squirtle’s shell is not merely used for protection.
           The shell’s rounded shape and the grooves on its surface help minimize resistance in water, enabling this pokemon to swim at high speed.

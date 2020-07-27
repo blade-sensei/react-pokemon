@@ -1,7 +1,4 @@
 .App {
-  padding: 5% 0;
-  width: 400px;
-  margin: 0 auto;
-  height: 500px;
   display: flex;
+  height: 100vh;
 }

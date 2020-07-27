@@ -1,9 +1,6 @@
 .PokemonDetails {
   background-image: linear-gradient(90deg, #559EDF 38%, #69B9E3 62%);
   display: grid;
-  grid-template-rows: 619px;
-  grid-template-columns: 355px;
-
 }
 
 .container {
@@ -17,7 +14,7 @@
   flex: 1;  
   background: #FAFAFA;
   border-radius: 48px 48px 0 0;
-  
+  height: 100%;
 }
 
 .pokemon-avatar {
@@ -27,5 +24,41 @@
 }
 
 .name {
+  font-family: Avenir-Book;
+  font-size: 40px;
+  color: #4F4F4F;
+  letter-spacing: 0;
   text-align: center;
+}
+
+.logo {
+display: flex;
+font-family: Avenir-Heavy;
+font-size: 12px;
+color: #FFFFFF;
+letter-spacing: 0;
+align-items: center;
+height: 30px;
+width: 110px;
+background: #559EDF;
+box-shadow: 0 0 10px 0 rgba(85,158,223,0.70);
+border-radius: 104px;
+margin-left: 10px;
+}
+
+.types-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  width: 30px;
+  height: 30px;
+  margin-right: 3px;
+  margin-left: 10px;
+}
+
+.description {
+  padding: 0 3em;
+  margin-top: 4em;
 }
