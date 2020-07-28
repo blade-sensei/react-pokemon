@@ -1,15 +1,20 @@
 import React from 'react';
 import './PokemonDetails.css';
 
-const PokemonDetails = () => (
+const PokemonDetails = ({location}) => {
+
+const pokemon = location.pokemon;
+  
+console.log(pokemon);
+return (
   <div className='PokemonDetails'>
     <div className="container">
       <div className="pokemon-details">
       <div className="pokemon-avatar">
-        <img src="/img/pokemon/avatar/pokemon.png" alt="pokemon avatar" />
+        <img src={pokemon.imageURL} alt="pokemon avatar" />
       </div>
         <h2 className="name">
-          Squirtle
+          {pokemon.name}
         </h2>
         <div className="types-logo">
           <span className='logo'>
@@ -31,5 +36,6 @@ const PokemonDetails = () => (
   </div>
 );
 
+}
 
 export default PokemonDetails;

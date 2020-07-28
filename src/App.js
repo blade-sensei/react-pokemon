@@ -13,11 +13,10 @@ function App() {
   return (
     <Provider store={ConfigureStore}>
       <div className="App">
-          <Router forceRefresh={true}>
+          <Router>
             <Switch>
-            <Route path='/pokemon' component = {PokemonDetails}/>
-              <Route path='/list' component = {ListPokemon}/>
-              <Redirect from='/' to='/list'/>
+              <Route path='/pokemon' component = {PokemonDetails}/>
+              <Route path='/' component = {ListPokemon}/>
             </Switch>
           </Router>
       </div>

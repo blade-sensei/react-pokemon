@@ -22,8 +22,10 @@ const ListPokemonConnected = ({search}) => {
 
   const redirectToPokemonOverview = (pokemon) => {
     //
-    console.log(pokemon);
-    history.push('/pokemon', pokemon);
+    history.push({
+      pathname: '/pokemon',
+      pokemon:  pokemon
+    });
   }
 
   const fetchPokemons = async () => {
@@ -36,6 +38,7 @@ const ListPokemonConnected = ({search}) => {
       const {types, id, name} = data;
       
       const imageURL = getPokemonImageURL(id);
+      console.log(data);
       data = {
         id,
         name,

@@ -23,6 +23,11 @@
   margin-top: -130px;
 }
 
+.pokemon-avatar img {
+  height: 170px;
+  width: 170px;
+}
+
 .name {
   font-family: Avenir-Book;
   font-size: 40px;
