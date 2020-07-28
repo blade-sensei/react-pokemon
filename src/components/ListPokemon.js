@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './ListPokemon.css'
 import { useHistory } from 'react-router-dom';
 import PokemonOverview from './PokemonOverview';
 import MobileView from './MobileView';
+import { connect } from 'react-redux'
 
-const ListPokemon = (props) => {
+const mapStateToProps = state => {
+  return { search: state.search }
+}
+
+const ListPokemonConnected = ({search}) => {
   let history = useHistory();
-  console.log(props);
 
   const redirectToPokemonOverview = (pokemon) => {
     //
@@ -53,11 +57,14 @@ const ListPokemon = (props) => {
   
   return (
     <MobileView>
+      { search }
       <div className='ListPokemon'>
         { renderListPokemon(pokemons) }
       </div>
     </MobileView>
   )
 }
+
+const ListPokemon = connect(mapStateToProps)(ListPokemonConnected);
 
 export default ListPokemon;
