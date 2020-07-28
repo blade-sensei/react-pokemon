@@ -11,6 +11,14 @@ const mapStateToProps = state => {
 
 const ListPokemonConnected = ({search}) => {
   let history = useHistory();
+  const [pokemons, setPokemons] = useState([]);
+
+  useEffect(() => {
+    const fetch = async () => {
+      await fetchPokemons()
+    }
+    fetch();
+  }, [search])
 
   const redirectToPokemonOverview = (pokemon) => {
     //
@@ -18,33 +26,20 @@ const ListPokemonConnected = ({search}) => {
     history.push('/pokemon', pokemon);
   }
 
-  const pokemons = [
-    {'name': 'pikachu'},
-    {'name': 'bulbazor'},
-    {'name': 'pikachu'},
-    {'name': 'bulbazor'},
-    {'name': 'pikachu'},
-    {'name': 'bulbazor'},
-    {'name': 'pikachu'},
-    {'name': 'bulbazor'},
-    {'name': 'pikachu'},
-    {'name': 'bulbazor'},
-    {'name': 'pikachu'},
-    {'name': 'bulbazor'},
-    {'name': 'pikachu'},
-    {'name': 'bulbazor'},
-    {'name': 'pikachu'},
-    {'name': 'bulbazor'},
-    {'name': 'pikachu'},
-    {'name': 'bulbazor'},
-    {'name': 'pikachu'},
-    {'name': 'bulbazor'},
-    {'name': 'pikachu'},
-    {'name': 'bulbazor'},
-    {'name': 'pikachu'},
-    {'name': 'bulbazor'},
-    
-  ];
+  const fetchPokemons = async () => {
+    let pokemons = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
+    pokemons = await pokemons.json();
+    pokemons = pokemons.results;
+    pokemons = await Promise.all(pokemons.map(async (pokemon) => {
+      let data = await fetch(pokemon.url);
+      data = await data.json();
+      pokemon.data = data;
+      return pokemon;
+    }))
+    setPokemons(pokemons);
+  }
+
+  
   const renderListPokemon = (pokemons) => (
     pokemons.map((pokemon) => (
       <div className='pokemon-overview' onClick={() => redirectToPokemonOverview(pokemon) }>
@@ -57,7 +52,6 @@ const ListPokemonConnected = ({search}) => {
   
   return (
     <MobileView>
-      { search }
       <div className='ListPokemon'>
         { renderListPokemon(pokemons) }
       </div>
