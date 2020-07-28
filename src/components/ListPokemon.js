@@ -33,10 +33,24 @@ const ListPokemonConnected = ({search}) => {
     pokemons = await Promise.all(pokemons.map(async (pokemon) => {
       let data = await fetch(pokemon.url);
       data = await data.json();
-      pokemon.data = data;
-      return pokemon;
+      const {types, id, name} = data;
+      
+      const imageURL = getPokemonImageURL(id);
+      data = {
+        id,
+        name,
+        types,
+        imageURL,
+        description: ''
+      }
+      return data;
+      
     }))
     setPokemons(pokemons);
+  }
+
+  const  getPokemonImageURL = (number) => {
+    return `https://pokeres.bastionbot.org/images/pokemon/${number}.png`;
   }
 
   
@@ -44,7 +58,7 @@ const ListPokemonConnected = ({search}) => {
     pokemons.map((pokemon) => (
       <div className='pokemon-overview' onClick={() => redirectToPokemonOverview(pokemon) }>
           <div className='pokemon-overview'>
-           <PokemonOverview/>
+           <PokemonOverview pokemon={pokemon}/>
           </div>
       </div>
     ))
