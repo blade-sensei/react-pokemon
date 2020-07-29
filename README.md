@@ -1,6 +1,8 @@
 # Pokemon React
 Implementation of sketch prototype Basic Pokedex
 
+demo: https://rtn-poke-react.netlify.app/
+
 ## Tools 
 
 - React
