@@ -1,5 +1,4 @@
 .PokemonDetails {
-  background-image: linear-gradient(90deg, #559EDF 38%, #69B9E3 62%);
   display: grid;
 }
 
@@ -46,7 +45,7 @@ align-items: center;
 height: 40px;
 width: 40%;
 background: #559EDF;
-box-shadow: 0 0 10px 0 rgba(85,158,223,0.70);
+box-shadow: 0 0 10px 0 rgba(20, 20, 20, 0.7);
 border-radius: 104px;
 margin-left: 10px;
 }
@@ -70,4 +69,5 @@ margin-left: 10px;
 
 .stats {
   margin-top: 5em;
+  width: 100%;
 }

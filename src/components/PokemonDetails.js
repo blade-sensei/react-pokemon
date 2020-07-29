@@ -1,22 +1,36 @@
 import React from 'react';
 import './PokemonDetails.css';
+import colors from '../consts/types.color';
 
 const PokemonDetails = ({location}) => {
 
 const pokemon = location.pokemon;
-console.log(pokemon);
 
+console.log(colors);
 const renderTypes = () => (
   pokemon.types.map((typeItem) => (
-    <span className='logo'>
+    <span className='logo' style={styleColor(typeItem.type.name)}>
       <img src={`/img/pokemon/types/${typeItem.type.name}.png`} alt=""/>
   <span className="type">{typeItem.type.name}</span>
     </span>
   ))
 )
+
+const styleColor = (type) => {
+  console.log(colors[type]);
+  const color = `#${colors[type]}`
+  return {
+    backgroundColor: color,
+  }
+}
+
+const pokemonBackgroundColor = () => {
+  const [type] = pokemon.types;
+  return styleColor(type.type.name);
+}
   
 return (
-  <div className='PokemonDetails'>
+  <div className='PokemonDetails' style={pokemonBackgroundColor()}>
     <div className="container">
       <div className="pokemon-details">
       <div className="pokemon-avatar">
