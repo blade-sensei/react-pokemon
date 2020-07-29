@@ -6,7 +6,7 @@ export default  {
   dragon: '0C69C8',
   electric: 'EDD53E',
   fairy: 'EC8CE5',
-  fight: 'CE4265',
+  fighting: 'CE4265',
   fire: 'FB9B51',
   flying: '90A7DA',
   ghost: '516AAC',

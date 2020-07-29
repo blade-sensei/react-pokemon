@@ -2,3 +2,11 @@
   display: flex;
   height: 100vh;
 }
+
+@media only screen and (min-width: 768px) {
+  .App {
+    padding: 0 32%;
+    background-color: rgba(39, 38, 43, 0.904);
+  }
+}
+
