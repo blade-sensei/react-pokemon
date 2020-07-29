@@ -1,3 +1,6 @@
 .ListPokemon {
   overflow-x: scroll;
 }
+.spinner {
+  text-align: center;
+}

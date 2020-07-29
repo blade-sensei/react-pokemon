@@ -4,16 +4,12 @@
   align-items: center;
   padding-right: 4px;
   cursor: pointer;
+  background: rgb(129 230 235);
 }
 
 .PokemonOverview:hover {
-  background-image: linear-gradient(-1deg, #61d4f1 0%, #70cee6 100%);
   box-shadow: 0 0 10px 0 rgba(96,173,225,0.70);
-/* Sketch doesnt export pattern fills at this point */
-/* Sketch doesnt export pattern fills at this point */
-
-
-
+  background-image: linear-gradient(135deg, #7DD897 0%, #3DD1A2 100%);
 }
 
 .types {
