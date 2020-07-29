@@ -18,7 +18,6 @@ const  ConnectedHeader = ({search}) => {
   }
 
   useEffect(() => {
-    console.log(searchUserEntry);
     search(searchUserEntry);
   }, [searchUserEntry, search])
 

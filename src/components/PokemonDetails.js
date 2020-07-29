@@ -4,8 +4,17 @@ import './PokemonDetails.css';
 const PokemonDetails = ({location}) => {
 
 const pokemon = location.pokemon;
-  
 console.log(pokemon);
+
+const renderTypes = () => (
+  pokemon.types.map((typeItem) => (
+    <span className='logo'>
+      <img src={`/img/pokemon/types/${typeItem.type.name}.png`} alt=""/>
+  <span className="type">{typeItem.type.name}</span>
+    </span>
+  ))
+)
+  
 return (
   <div className='PokemonDetails'>
     <div className="container">
@@ -17,14 +26,7 @@ return (
           {pokemon.name}
         </h2>
         <div className="types-logo">
-          <span className='logo'>
-            <img src="/img/pokemon/types/logo/water.png" alt=""/>
-            <span className="type">ICE</span>
-          </span>
-          <span className="logo">
-            <img src="/img/pokemon/types/logo/ice.png" alt=""/>
-            <span className="type">DRAGON</span>
-          </span>
+          { renderTypes()}
         </div>
         <div className="description">
           Squirtle’s shell is not merely used for protection.

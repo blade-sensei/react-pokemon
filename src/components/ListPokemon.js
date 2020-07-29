@@ -38,7 +38,6 @@ const ListPokemonConnected = ({search}) => {
       const {types, id, name} = data;
       
       const imageURL = getPokemonImageURL(id);
-      console.log(data);
       data = {
         id,
         name,
