@@ -1,5 +1,5 @@
 const initialState = {
-  search: 'initial'
+  search: ''
 };
 
 function searchReducer(state = initialState, action) {

@@ -3,7 +3,13 @@ import './PokemonOverview.css'
 
 const PokemonOverview = ({pokemon}) => {
 
-  
+  const renderTypes = () => (
+    pokemon.types.map((typeItem) => (
+      <span className='logo'>
+        <img src={`/img/pokemon/types/${typeItem.type.name}.png`} alt="type"/>
+      </span>
+    ))
+  )
 
   return (
     <div className='PokemonOverview'>
@@ -15,12 +21,7 @@ const PokemonOverview = ({pokemon}) => {
         <span className='caracter-number'>#{pokemon.id}</span> 
       </div>
       <div className='types'>
-        <span className='logo'>
-          <img src='/img/pokemon/types/leaf.png' alt=''/>
-        </span>
-        <span className='logo'>
-          <img src='/img/pokemon/types/poison.png' alt=''/>
-        </span>
+        { renderTypes() }
       </div>
     </div>
   )

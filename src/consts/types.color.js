@@ -3,4 +3,18 @@ export default  {
   dark: '595761',
   grass: '5FBC51',
   poison: 'A864C7',
+  dragon: '0C69C8',
+  electric: 'EDD53E',
+  fairy: 'EC8CE5',
+  fight: 'CE4265',
+  fire: 'FB9B51',
+  flying: '90A7DA',
+  ghost: '516AAC',
+  ground: 'DC7545',
+  ice: '70CCBD',
+  normal: '9298A4',
+  psychic: 'F66F71',
+  rock: 'C5B489',
+  steel: '52869D',
+  water: '4A90DD'
 }

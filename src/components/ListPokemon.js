@@ -12,10 +12,18 @@ const mapStateToProps = state => {
 const ListPokemonConnected = ({search}) => {
   let history = useHistory();
   const [pokemons, setPokemons] = useState([]);
+  const [searchPokemons, setSearchPokemons] = useState([]);
 
   useEffect(() => {
     const fetch = async () => {
-      await fetchPokemons()
+      if (search) {
+        const filter = pokemons.filter((pokemon) => {
+          return pokemon.name.startsWith(search);
+        })
+        setSearchPokemons(filter);
+      } else {
+        await fetchPokemons()
+      }
     }
     fetch();
   }, [search])
@@ -27,6 +35,8 @@ const ListPokemonConnected = ({search}) => {
       pokemon:  pokemon
     });
   }
+
+
 
   const fetchPokemons = async () => {
     let pokemons = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
@@ -49,6 +59,7 @@ const ListPokemonConnected = ({search}) => {
       
     }))
     setPokemons(pokemons);
+    setSearchPokemons([...pokemons]);
   }
 
   const  getPokemonImageURL = (number) => {
@@ -57,7 +68,7 @@ const ListPokemonConnected = ({search}) => {
 
   
   const renderListPokemon = (pokemons) => (
-    pokemons.map((pokemon) => (
+    searchPokemons.map((pokemon) => (
       <div className='pokemon-overview' onClick={() => redirectToPokemonOverview(pokemon) }>
           <div className='pokemon-overview'>
            <PokemonOverview pokemon={pokemon}/>
@@ -69,7 +80,7 @@ const ListPokemonConnected = ({search}) => {
   return (
     <MobileView>
       <div className='ListPokemon'>
-        { renderListPokemon(pokemons) }
+        { renderListPokemon(searchPokemons) }
       </div>
     </MobileView>
   )
