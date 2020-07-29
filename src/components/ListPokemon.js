@@ -18,7 +18,7 @@ const ListPokemonConnected = ({search}) => {
     const fetch = async () => {
       if (search) {
         const filter = pokemons.filter((pokemon) => {
-          return pokemon.name.startsWith(search);
+          return pokemon.name.startsWith(search.toLowerCase());
         })
         setSearchPokemons(filter);
       } else {
