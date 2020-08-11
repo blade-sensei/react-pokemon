@@ -23,7 +23,6 @@ const  ConnectedHeader = ({search}) => {
 
   return (
     <div className='Header'>
-      <img alt='nav' src='/img/status-bar.png'/>
       <div className='title'>
         Pokemon
       </div>
